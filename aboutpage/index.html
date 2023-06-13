@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inches and Pixels</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="logo.png">
+    </head>
+    <body>
+        
+        
+        <div class="logo">
+            
+        </div>
+
+        <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <ul>
+                    <li><a href="/homepage/index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="/downloadPage/index.html">Download</a></li>
+                    <li><a href="/contactPage/index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="aboutPage">
+            <div class="aboutPage-container">
+
+                <h1>About —</h1>
+
+                <p>
+                    Welcome to Inches and Pixels, a cutting-edge application developed using VB.NET and Microsoft SQL Access. Designed specifically for printing services, Inches and Pixels provides a streamlined and efficient order system tailored to your unique needs. Whether you're a student, faculty member, or staff at Lyceum of Alabang, our application is here to simplify your printing requirements.
+                </p>
+                <br>
+                <p>
+                    With Inches and Pixels, you can easily place print orders for various materials, including documents, flyers, posters, and more. Our user-friendly interface allows you to specify the exact dimensions in both inches and pixels, ensuring precise and accurate printing every time. Say goodbye to guesswork and hello to professional-quality prints that perfectly match your vision.
+                </p>
+                <br>
+                <p>
+                    As a thesis project developed by our dedicated team, Inches and Pixels is the result of extensive research and meticulous attention to detail. We understand the importance of a reliable and efficient printing system, especially in a busy educational environment. Experience the convenience of Inches and Pixels and witness how it revolutionizes the way you handle printing services at Lyceum of Alabang.
+                </p>
+                <br>
+                
+                <h1>Snapshots —</h1>
+
+                <div class="container">
+
+                    <div class="image-container">
+
+                        <div class="image"><img src="logo.png"></div>
+                        <div class="image"><img src="startPage.png"></div>
+                        <div class="image"><img src="logInPage.png"></div>
+                        <div class="image"><img src="invalidAccount.png"></div>
+                        <div class="image"><img src="loadingUser.png"></div>
+                        <div class="image"><img src="welcomeUser.png"></div>
+                        <div class="image"><img src="userPanel.png"></div>
+                        <div class="image"><img src="thankYou.png"></div>
+                        <div class="image"><img src="loadingAdmin.png"></div>
+                        <div class="image"><img src="welcomeAdmin.png"></div>
+                        <div class="image"><img src="adminPage.png"></div>
+                        <div class="image"><img src="thankYou.png"></div>
+
+                    </div>
+
+                    <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="logo.png">
+                    </div>
+
+
+                </div>
+
+
+                    
+            </div>
+        </section>
+
+        <script>
+            $('#toggle').click(function() {
+            $(this).toggleClass('active');
+            $('#overlay').toggleClass('open');
+        });
+
+            document.querySelectorAll('.image-container img').forEach(image =>{
+                image.onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'block';
+                    document.querySelector('.popup-image img').src = image.getAttribute('src');
+                }
+            });
+
+            document.querySelector('.popup-image span').onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'none';
+            }
+
+        </script>
+
+    </body>
+</html>
